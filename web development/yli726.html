@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dunedin Dairy</title>
+    <link href="yli726.css" rel="stylesheet" type="text/css"/>
+    <script src = "yli726.js"></script>
+
+</head>
+<body>
+    <div> 
+        <table width="100%">
+            <tr style="cursor: pointer;">
+            <td><img src="http://redsox.uoa.auckland.ac.nz/ds/logo.svg" alt='logo' width="100" height="100" /></td>                        
+            <td id="dairytab" onclick="showDunedinDairy();">&#127968;</td>
+            <td id="registertab" onclick="showRegister();">&#128722;</td>
+            <td id="newstab" onclick="showNews();">&#128240;</td>
+            <td id="locationtab" onclick="showLocation();">&#x1f4cc;</td>
+            <td id="persontab" onclick="showPerson();">&#128105;</td>
+            <td id="booktab" onclick="showGuestBook();">&#128214;</td>
+            </tr>
+        </table>
+    </div>
+    <div id="homepage" class="homepage">
+        <h2>Dunedin Dairy</h2>
+        <hr class="hhr"/>
+
+        <p>
+            Welcome to the Dunedin Dairy, the leading online dairy shop in New Zealand. 
+            We take pride in sourcing the best dairy products from within New Zealand and abroad. 
+            Our shop is open 24/7, and we strive to deliver your purchases prompity.
+        </p>
+
+        <p>
+            Keeping in mind the safety of your and our staff, our deliveries are contactiess.
+        </p>
+
+        <div class="scale">   
+            <img src="https://d1poczgreawftx.cloudfront.net/8/w23114_kiddhannah_kiddh23114sacredcow%282019%2901.jpg?i=90716" alt="cow">
+        </div>
+        
+        
+        <p>
+            Hannah Kidd - Sacred Cow (2019) Milford Galleries Dunedin
+        </p>
+    <br />
+
+    <hr size="2" color="black" width="50%"/>
+
+    <p>&copy; All rights reserved. v1.0.0</p>
+    </div>
+
+    <div id="products" class="products">
+        <h2>Products</h2>
+        <hr class="hhr"/>
+        <input type="text" placeholder="&#128269" id="searchbar"/>
+        <div class="item">
+        </div>
+
+    </div>
+
+
+
+
+    <div id="news" class="news">
+        <h2>News</h2>
+        <hr class="hhr"/>
+        <div class="newslist">
+        </div>
+    </div>
+
+
+
+    <div id="location" class="location">
+        <h2>Location</h2>
+        <hr class="hhr"/>
+        <div class="scale">
+            <img src="http://redsox.uoa.auckland.ac.nz/ds/map.png" alt="">
+        </div>
+        <div class="bg">
+            <br>
+            <p class="pcenter">535 Pine Hill Road Dunedin New Zealand</p>  
+            <div class="vcard">
+            </div>
+
+            <p class="pcenter"><a href="http://redsox.uoa.auckland.ac.nz/ds/DairyService.svc/vcard">Add us to your address book</a></p>
+           
+        </div>
+    </div>
+
+
+    <div id="person" class="person">
+        <p style="font-size:40px;">Register with us!</p>
+        <hr class="hhr"/>
+        <div id="registerbox" align="center">
+            <div class="gbcregisterbox" >
+                <div>
+                    <p>UserName:</p>
+                    <input id="username" />
+                    <p>Password:</p>
+                    <input id="password"/>
+                    <p>Address:</p>
+                    <input id="address"/>
+                </div>
+                <button  id="send" onclick="sendregister()">&#8680;</button>
+                <p style="color:aliceblue">username not available</p>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <div id="guestbook" class="guestbook">
+        <h2>Guestbook</h2>
+        <hr class="hhr"/>
+        <div id="commentbox">
+            <p style="font-size: medium;">Please sign our guest book</p>
+            <p style="font-size: small;">Cheesy comments are OK as long as they aren't cheesy</p>
+            <div class="gbcommentbox">
+                <textarea id="comments"
+                          onfocus="if(value=='You comments here'){value=''}"
+                          onblur="if (value ==''){value='You comments here'}">You comments here</textarea>
+                <div>
+                    <p class="gbyourname">Your name:</p>
+                    <input id="name" placeholder="Enter your name here"/> 
+                    <button id="send" onclick="sendcomment()">send</button>
+                </div>
+            </div>
+            <div>
+                <hr color="black" width=50%/>
+            </div>
+            <h3>Recent Entries</h3>
+            <iframe id="recentcomment" src="http://redsox.uoa.auckland.ac.nz/ds/DairyService.svc/htmlcomments"
+                    width="800"
+                    height="1000"
+                    frameborder="1" name="Comments" scrolling="no" style="width: 100%; border: none;"></iframe>
+        </div>
+    </div>
+
+
+
+
+    <div id="register" class="register">
+        <h2 style="font-size:40px;">Please Login</h2>
+        <hr class="hhr"/>
+        <div id="loginbox" align="center">
+            <div class="gbcloginbox">
+                <div>
+                    <p>UserName</p>
+                    <input id="username" />
+                    <p>Password</p>
+                    <input id="password" />
+                </div>
+                <button align="right" onclick="showProducts()">Login</button>
+                <p style="color:aliceblue">v1.0.0</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
