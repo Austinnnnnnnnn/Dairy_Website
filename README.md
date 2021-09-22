@@ -1,2 +1,2 @@
 # Dairy_Website
-Create a webite for Dunedin Dairy
+Create a website for Dunedin Dairy
